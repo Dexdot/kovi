@@ -1,0 +1,75 @@
+// Regular
+@font-face 
+	font-family: 'Gotham Pro'
+	src: url('../fonts/GothamPro.woff2') format('woff2'),url('../fonts/GothamPro.woff') format('woff')
+	font-weight: 400
+	font-style: normal
+
+=reg
+	font-family: 'Gotham Pro', sans-serif
+	font-weight: 400
+
+// Light
+@font-face 
+	font-family: 'Gotham Pro'
+	src: url('../fonts/GothamPro-Light.woff2') format('woff2'),url('../fonts/GothamPro-Light.woff') format('woff')
+	font-weight: 300
+	font-style: normal
+
+=lt
+	font-family: 'Gotham Pro', sans-serif
+	font-weight: 300
+
+// Medium
+@font-face 
+	font-family: 'Gotham Pro'
+	src: url('../fonts/GothamPro-Medium.woff2') format('woff2'),url('../fonts/GothamPro-Medium.woff') format('woff')
+	font-weight: 500
+	font-style: normal
+
+=md
+	font-family: 'Gotham Pro', sans-serif
+	font-weight: 500
+
+// Bold
+@font-face 
+	font-family: 'Gotham Pro'
+	src: url('../fonts/GothamPro-Bold.woff2') format('woff2'),url('../fonts/GothamPro-Bold.woff') format('woff')
+	font-weight: 700
+	font-style: normal
+
+=bold
+	font-family: 'Gotham Pro', sans-serif
+	font-weight: 700
+
+
+=btn
+	background: #fff
+	color: $b
+	width: 200px
+	height: 46px
+	line-height: 46px
+	padding-bottom: 5px
+	border-radius: 50px
+	border: none
+	text-align: center
+	+md
+	transition: all 0.3s
+	&:focus
+		outline: none
+	&:active
+		padding-bottom: 2px
+	&:hover
+		transform: translateY(-4px)
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+	@media only screen and (min-width : 480px)
+		line-height: 1
+
+
+=hdr
+	text-align: center
+	font-size: 40px
+	color: #fff
+	+lt
+	@media only screen and (min-width : 1598px)
+		font-size: 44px

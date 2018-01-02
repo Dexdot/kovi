@@ -1,0 +1,434 @@
+@import "vars"
+@import "mixins"
+
+@media only screen and (min-width : 1399px)
+	.header__logo
+		font-size: 30px
+	.nav__link
+		font-size: 17px
+	.hero
+		padding-left: 11%
+		&-shape
+			&-lg
+				width: 101%
+			&-lt
+				right: 10px
+		&__title
+			max-width: 460px
+		&__subtitle, &__btn
+			font-size: 17px
+	.down-arrow
+		bottom: 20%
+	.email
+		font-size: 16px
+
+	.about
+		&__feature-wrap
+			width: 255px
+		&__title, &__feature
+			font-size: 28px
+		&__text
+			font-size: 17px
+
+	.works
+		&__video
+			width: 400px
+			&-play svg
+				width: 56px
+				height: 56px
+		&__btn
+			font-size: 18px
+		&__tab
+			font-size: 17px
+			width: 150px
+	
+	.achieve
+		&__text
+			font-size: 17px
+
+	.blogers
+		&__prev
+			left: 45%
+		&__next
+			right: 45%
+	.bloger
+		margin: 0 auto 20px auto
+		width: 310px
+
+	.footer
+		&__icon
+			width: 135px
+		&__subtitle, &__btn
+			font-size: 17px
+		&__dex
+			font-size: 16px
+		&__btn
+			transform: translateX(14px)
+		&__vk
+			width: 50px
+			height: 50px
+			svg
+				width: 24px
+				height: 24px
+@media only screen and (min-width : 1599px)
+	.header__logo
+		font-size: 32px
+	.nav__link, .hero__subtitle, .hero__btn, .email
+		font-size: 18px
+	.hero
+		&__title
+			max-width: 480px
+		&__btn
+			width: 210px
+			height: 48px
+
+	.about
+		&__feature
+			&-wrap
+				width: 275px
+			&--big
+				font-size: 180px
+		&__title, &__feature
+			font-size: 30px
+		&__text
+			font-size: 19px
+			line-height: 30px
+		&__info li
+			margin-bottom: 2px
+		&-shape
+			&-md
+				width: 470px
+				top: 10%
+			&-stroke
+				right: 15%
+
+	.works
+		&__tab
+			font-size: 18px
+			width: 160px
+			height: 40px
+			line-height: 30px
+		&__video
+			width: 500px
+			&-play svg
+				width: 66px
+				height: 66px
+		&__btn
+			width: 220px
+			height: 48px
+			font-size: 20px
+
+	.partner
+		width: 220px
+		height: 190px
+		&__ico
+			width: 130px
+
+	.bloger
+		min-width: 340px
+		width: 95%
+		height: 340px
+		&__num
+			span
+				font-size: 18px
+			svg
+				width: 35px
+				height: 35px
+		&__name
+			font-size: 28px
+		&__info-item
+			font-size: 18px
+		&__stat
+			padding-left: 50px
+			padding-right: 50px
+
+	.achieve
+		&__text
+			font-size: 18px
+		&__icon
+			min-width: 90px
+			min-height: 90px
+	.footer
+		&__icon
+			width: 155px
+		&__subtitle, &__btn
+			font-size: 18px
+		&__btn
+			width: 210px
+			height: 48px
+		&__vk
+			width: 54px
+			height: 54px
+			svg
+				width: 26px
+				height: 26px
+		&__dex
+			font-size: 17px
+@media only screen and (max-width : 1199px) 
+	.hero
+		&-shape
+			&-lg
+				left: -5%
+			&-lt
+				box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+	
+	.about
+		padding-left: 0
+		&-shape
+			&-md
+				width: 310px
+				z-index: -1
+			&-lt
+				top: 180px
+
+	.works
+		&__ring
+			width: 300px
+			height: 300px
+			border-width: 36px
+			transform: translate(30%, 30%)
+		&__tabs
+			width: 80%
+
+
+	.bloger
+		width: 225px
+		&__stat
+			padding-left: 20px
+			padding-right: 20px
+@media only screen and (max-width : 991px) 
+	.hero
+		&-shape
+			&-lg
+				left: -10%
+			&-lt
+				display: none
+	
+	.about
+		&__feature
+			&-wrap
+				min-width: 334px
+			&--big
+				font-size: 130px
+		&__box
+			justify-content: space-between
+		&__info
+			margin-left: 0
+		&-shape
+			&-md
+				transform: translateY(-10%)
+			&-lt
+				top: 220px
+				right: 60%
+
+	.works
+		&__video
+			&s
+				margin: 60px 0
+				width: 100%
+			flex-grow: 1
+			margin: 0 5px
+		&__tabs
+			width: 95%
+		&__tab
+			width: 130px
+	.achieve
+		&__icon
+			margin-bottom: 35px
+			min-width: 75px
+			min-height: 75px
+
+	.blogers
+		&__prev
+			left: 43%
+		&__next
+			right: 43%
+	.bloger
+		width: 230px
+
+	.wow
+		visibility: visible !important
+		animation: none !important
+@media only screen and (max-width : 767px)
+	.header__nav
+		display: none
+	.hamburger
+		top: 1em
+		right: 1em
+	.email
+		color: #fff
+		+reg
+		&:hover
+			color: #fff
+		&::before
+			background: #fff
+	.hero
+		&-shape
+			&-lg
+				left: -14%
+
+	.about
+		&-shape
+			&-md, &-stroke
+				display: none
+			&-sm
+				top: 60px
+			&-lt
+				top: 260px
+				right: 30%
+		&__feature-wrap
+			margin-bottom: 60px
+			flex-grow: 1
+			width: auto
+		&__box
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+		&__title
+			line-height: 1.4
+
+	.works
+		&__ring
+			width: 200px
+			height: 200px
+			border-width: 24px
+			transform: translate(30%, 35%)
+		&__header
+			margin-bottom: 30px
+		&__videos
+			margin: 20px 0
+		&__tabs
+			flex-wrap: wrap
+		&__tab
+			flex-grow: 1
+			margin: 10px
+
+	.achieves
+		flex-wrap: wrap
+	.achieve
+		flex-grow: 1
+		height: 165px
+
+	.blogers
+		&__prev
+			left: 39%
+		&__next
+			right: 39%
+	.bloger
+		width: 94%
+		margin-left: auto
+		margin-right: auto
+	.partner
+		height: 120px
+		&__ico
+			width: 80px
+
+	.footer
+		&__dex
+			align-self: flex-end
+			text-align: right
+		&__btn
+			width: 140px
+			height: 36px
+			font-size: 14px
+		&__vk
+			bottom: 30px
+
+@media only screen and (max-width : 480px) 
+	.hero
+		align-items: center
+		padding: 0
+		&-shape
+			&-lg
+				left: -40%
+		&__title
+			width: 100%
+
+	.about
+		&-shape
+			&-lt
+				display: none
+			&-sm
+				top: 100px
+		&__info li
+			margin-bottom: 10px
+		&__text.is-dotted::before
+			transform: translateY(-13px)
+	.email
+		bottom: -20px
+	.down-arrow
+
+
+	.works
+		&__ring
+			display: none
+		&__tab
+			margin: 8px
+			width: 43%
+			font-size: 14px
+			&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+				flex-grow: 0
+
+	.achieve
+		&__icon
+			min-width: 65px
+			min-height: 65px
+		&__text
+			font-size: 15px
+	
+	.blogers
+		&__prev
+			left: 30%
+		&__next
+			right: 30%
+	.bloger
+		width: 100%
+
+	.partners
+		&__row
+			flex-direction: column
+			display: none
+			&:first-child
+				display: flex
+	.partner
+		border-right: 1px solid #f2f2f2
+		&:last-child
+			border-bottom: 1px solid #f2f2f2
+		&__ico
+			width: 90px
+
+	#footer
+		padding-bottom: 90px
+	.footer
+		&__dex
+			font-size: 13px
+		&__logo
+			margin-right: 20px
+		&__btn
+			display: none
+		&__vk
+			transform: translateX(0)
+			bottom: auto
+			left: auto
+			right: 15px
+			top: 50px
+			&:hover
+				transform: scale(1.1)
+// OTHER
+@media only screen and (max-width : 700px) 
+	.works
+		padding-left: 10px
+		padding-right: 10px
+		&__header
+			font-size: 36px
+		&__videos
+				margin: 30px 0
+				flex-direction: column
+		&__video
+			margin: 10px
+			width: 90%
+@media only screen and (max-width : 350px)
+	.works__tabs-inner button
+		width: 110px
+		font-size: 14px
+

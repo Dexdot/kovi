@@ -1,0 +1,14 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 274.7 84.5" style="enable-background:new 0 0 274.7 84.5;" xml:space="preserve">
+	<style type="text/css">
+		.st0{enable-background:new;}
+		.kovi-k, .kovi-o, .kovi-v, .kovi-i, .kovi-play{fill:#FFF;}
+	</style>
+	<g class="st0">
+		<path class="kovi-k" d="M1.6,2.2h17.6v34.9L51.5,2.2h21.2L40.2,36.1l34,45.9H53.1L28.4,48l-9.2,9.6V82H1.6V2.2z"/>
+		<path class="kovi-o" d="M75,42.1c0-22.7,17.9-41.3,42.5-41.3c24.6,0,42.3,18.4,42.3,41.3c0,22.7-17.9,41.3-42.5,41.3S75,65,75,42.1z
+			 M141.5,42.1c0-13.7-10-25.1-24.2-25.1S93.3,28.2,93.3,42.1c0,13.7,10,25.1,24.2,25.1S141.5,56,141.5,42.1z"/>
+		<path class="kovi-v" d="M163.5,2.2h19.4l20.9,56.2l20.9-56.2h18.9l-32.3,80.4h-15.5L163.5,2.2z"/>
+		<path class="kovi-i" d="M256.6,2.2h17.6V82h-17.6V2.2z"/>
+	</g>
+	<polygon class="kovi-play" points="127.5,42.5 111,33 111,52 "/>
+</svg>

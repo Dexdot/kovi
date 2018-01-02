@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="370px" height="1042px" viewBox="0 0 370 1042">
+<filter filterUnits="objectBoundingBox" x="-6.94" y="-6.94" width="113.89" height="113.89" id="filter0">
+<feGaussianBlur in="SourceAlpha" stdDeviation="32.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.17" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="0.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+<feFlood flood-color="rgb(55,125,255)" result="coFloodOut1"/>
+<feComposite in="coFloodOut1" in2="SourceAlpha" operator="in" result="coOverlay1"/>
+<feBlend in="coOverlay1" in2="sourceGraphic" mode="normal" result="colorOverlay1"/>
+</filter>
+<filter filterUnits="objectBoundingBox" x="-10.98" y="-10.96" width="121.96" height="121.92" id="filter1">
+<feGaussianBlur in="SourceAlpha" stdDeviation="32.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.17" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="0.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+<feFlood flood-color="rgb(55,125,255)" result="coFloodOut1"/>
+<feComposite in="coFloodOut1" in2="SourceAlpha" operator="in" result="coOverlay1"/>
+<feBlend in="coOverlay1" in2="sourceGraphic" mode="normal" result="colorOverlay1"/>
+</filter>
+<filter filterUnits="objectBoundingBox" x="-17.33" y="-17.38" width="134.67" height="134.76" id="filter2">
+<feGaussianBlur in="SourceAlpha" stdDeviation="32.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.17" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="0.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+<feFlood flood-color="rgb(55,125,255)" result="coFloodOut1"/>
+<feComposite in="coFloodOut1" in2="SourceAlpha" operator="in" result="coOverlay1"/>
+<feBlend in="coOverlay1" in2="sourceGraphic" mode="normal" result="colorOverlay1"/>
+</filter>
+<path fillRule="evenodd" d="M 584.78 79.42C 584.78 79.42 962.53 457.18 962.53 457.18 997.77 492.43 997.77 549.57 962.53 584.81 962.53 584.81 584.78 962.58 584.78 962.58 549.54 997.82 492.41 997.82 457.17 962.58 457.17 962.58 79.42 584.81 79.42 584.81 44.18 549.57 44.18 492.43 79.42 457.18 79.42 457.18 457.17 79.42 457.17 79.42 492.41 44.17 549.54 44.17 584.78 79.42Z" fill="rgb(55,125,255)" filter="url(#filter0)"/><path fillRule="evenodd" d="M 561.35 241.71C 561.35 241.71 800.28 480.64 800.28 480.64 822.57 502.93 822.57 539.07 800.28 561.36 800.28 561.36 561.35 800.29 561.35 800.29 539.06 822.58 502.93 822.58 480.64 800.29 480.64 800.29 241.71 561.36 241.71 561.36 219.42 539.07 219.42 502.93 241.71 480.64 241.71 480.64 480.64 241.71 480.64 241.71 502.93 219.42 539.06 219.42 561.35 241.71Z" fill="rgb(55,125,255)" filter="url(#filter1)"/><path fillRule="evenodd" d="M 546.49 344.55C 546.49 344.55 697.43 495.49 697.43 495.49 711.52 509.57 711.52 532.4 697.43 546.49 697.43 546.49 546.49 697.42 546.49 697.42 532.4 711.5 509.57 711.5 495.49 697.42 495.49 697.42 344.54 546.49 344.54 546.49 330.46 532.4 330.46 509.57 344.54 495.49 344.54 495.49 495.49 344.55 495.49 344.55 509.57 330.47 532.4 330.47 546.49 344.55Z" fill="rgb(55,125,255)" filter="url(#filter2)"/></svg>

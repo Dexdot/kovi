@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="1328px" height="864px" viewBox="0 0 1328 864">
+<filter filterUnits="objectBoundingBox" x="-6.08" y="-6.07" width="112.16" height="112.15" id="filter0">
+<feGaussianBlur in="SourceAlpha" stdDeviation="32.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.17" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="0.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+</filter>
+<filter filterUnits="objectBoundingBox" x="-14.84" y="-14.84" width="129.68" height="129.68" id="filter1">
+<feGaussianBlur in="SourceAlpha" stdDeviation="32.50" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(0,0,0)" flood-opacity="0.17" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="-0.00" dy="0.00" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+<feFlood flood-color="rgb(55,125,255)" result="coFloodOut1"/>
+<feComposite in="coFloodOut1" in2="SourceAlpha" operator="in" result="coOverlay1"/>
+<feBlend in="coOverlay1" in2="sourceGraphic" mode="normal" result="colorOverlay1"/>
+</filter>
+<path fillRule="evenodd" d="M 436.93 824.01C 436.93 824.01-414.16-60.46-414.16-60.46-466.11-114.45-461.8-202.9-404.53-258.01-404.53-258.01 242.39-880.5 242.39-880.5 299.66-935.62 388.2-936.53 440.16-882.54 440.16-882.54 1291.25 1.94 1291.25 1.94 1343.2 55.93 1338.88 144.37 1281.61 199.48 1281.61 199.48 634.7 821.98 634.7 821.98 577.43 877.09 488.88 878 436.93 824.01Z" fill="rgb(55,125,255)"/><path fillRule="evenodd" d="M 605.35-425.83C 605.35-425.83 1036.77 5.62 1036.77 5.62 1077.02 45.87 1077.02 111.13 1036.77 151.38 1036.77 151.38 605.35 582.82 605.35 582.82 565.1 623.07 499.85 623.07 459.6 582.82 459.6 582.82 28.18 151.38 28.18 151.38-12.07 111.13-12.07 45.87 28.18 5.62 28.18 5.62 459.6-425.83 459.6-425.83 499.85-466.08 565.1-466.08 605.35-425.83Z" fill="rgb(55,125,255)" filter="url(#filter0)"/><path fillRule="evenodd" d="M 562.85 52.36C 562.85 52.36 739.61 229.14 739.61 229.14 756.1 245.63 756.1 272.37 739.61 288.86 739.61 288.86 562.85 465.64 562.85 465.64 546.36 482.13 519.62 482.13 503.13 465.64 503.13 465.64 326.36 288.86 326.36 288.86 309.87 272.37 309.87 245.63 326.36 229.14 326.36 229.14 503.13 52.36 503.13 52.36 519.62 35.87 546.36 35.87 562.85 52.36Z" fill="rgb(55,125,255)" filter="url(#filter1)"/></svg>

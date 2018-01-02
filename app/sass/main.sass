@@ -1,0 +1,810 @@
+@import "libs"
+@import "mixins"
+@import "vars"
+
+body 
+	position: relative
+	color: #000
+	background: #fff
+	opacity: 1
+	font-size: 16px
+	overflow-x: hidden
+	+reg
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-overflow-scrolling: touch
+section, footer
+	position: relative
+	z-index: 1
+a
+	&:-webkit-any-link, &:hover, &:focus, &:visited, &:active
+		text-decoration: none 
+
+/* 
+	Navigation
+	1. Main
+	2. About
+	3. Works
+	4. Achieves
+	5. Blogers
+	6. Partners
+	7. Footer
+ */
+
+#preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 99999
+	background: #fff
+#loader
+	display: block
+	position: relative
+	left: 50%
+	top: 50%
+	width: 150px
+	height: 150px
+	margin: -75px 0 0 -75px
+	border-radius: 50%
+	border: 3px solid transparent
+	border-top-color: $acc
+	animation: spin 2s linear infinite
+	&::before
+		content: ''
+		position: absolute
+		top: 5px
+		left: 5px
+		right: 5px
+		bottom: 5px
+		border-radius: 50%
+		border: 3px solid transparent
+		border-top-color: $b
+		-webkit-animation: spin 3s linear infinite
+		animation: spin 3s linear infinite
+	&::after
+		content: ''
+		position: absolute
+		top: 15px
+		left: 15px
+		right: 15px
+		bottom: 15px
+		border-radius: 50%
+		border: 3px solid transparent
+		border-top-color: $acc
+		-webkit-animation: spin 1.5s linear infinite
+		animation: spin 1.5s linear infinite
+
+@keyframes spin
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+
+canvas
+	position: absolute
+	top: 0
+	left: 0
+
+.content
+	z-index: 3
+.global-menu
+	transform: translateY(-100%)
+	&.is-opened
+		transform: translateY(0)
+	&__item
+		+lt
+		color: #fff
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			bottom: -2px
+			left: 0
+			width: 0
+			height: 1px
+			background: #fff
+			transition: all 0.3s
+		&:hover
+			&::before
+				width: 100%
+.shape-overlays__path
+	&:nth-child(1)
+		fill: #fff
+	&:nth-child(2)
+		fill: $b
+	&:nth-child(3)
+		fill: $acc
+
+/* 1. Main */
+header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 44px
+	position: relative
+	z-index: 2
+	&__logo
+		font-size: 28px
+		+bold
+		color: #fff
+		&:hover, &:focus, &:visited, &:active
+			color: #fff
+	&__nav
+		width: 30%
+		min-width: 340px
+.nav
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&__link
+		color: #fff
+		position: relative
+		transition: all 0.2s
+		&::before
+			content: ''
+			transition: all 0.2s
+			display: inline-block
+			width: 0%
+			height: 1px
+			background: #fff
+			position: absolute
+			bottom: -3px
+			left: 0
+			right: 0
+		&:hover, &:focus, &:visited, &:active
+			color: #fff
+		&:hover
+			opacity: 0.9
+			&::before
+				width: 100%
+.hero
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: center
+
+	min-height: 100vh
+	padding-top: 44px
+	padding-left: 7%
+
+	position: relative
+	z-index: 1
+	&__title
+		max-width: 400px
+	&__subtitle
+		color: #fff
+		margin-top: 20px
+		margin-bottom: 75px
+	&__btn
+		+btn
+	&-shape
+		&-lg
+			position: absolute
+			top: 0
+			left: -1%
+			z-index: 0
+		&-lt
+			position: absolute
+			background: $acc
+			width: 58px
+			height: 58px
+			bottom: 170px
+			right: 0
+			transform: rotate(45deg) translateX(65%)
+			border-radius: 10px
+
+
+.down-arrow
+	position: absolute
+	bottom: 30px
+	left: 50%
+	transform: translateX(-50%)
+	animation: down 2s ease-in-out infinite
+@keyframes down
+	0%
+		transform: translate(-50%,-20px)
+		opacity: 0
+	50%
+		opacity: 1
+	to
+		transform: translate(-50%,20px)
+		opacity: 0
+.email
+	position: absolute
+	bottom: 30px
+	right: 0
+	color: $b
+	font-size: 14px
+	+md
+	&:hover
+		color: $b
+		&::before
+			width: 100%
+	&::before
+		content: ''
+		transition: all 0.2s
+		display: inline-block
+		width: 0%
+		height: 1px
+		background: $b
+		position: absolute
+		bottom: -3px
+		left: 0
+		right: 0
+
+
+
+/* 2. About */
+#about
+	padding-top: 430px
+	padding-bottom: 94px
+.about
+	padding-left: 7%
+	&__box
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+		justify-content: flex-start
+		&:first-child
+			margin-bottom: 70px
+	&__feature
+		color: $b
+		font-size: 26px
+		line-height: 50px
+		text-align: center
+		&--big
+			+bold
+			color: $acc
+			font-size: 150px
+		&-wrap
+			width: 242px
+			transform: translateY(17%)
+	&__info
+		margin-left: 150px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+	&__title
+		color: $b
+		font-size: 26px
+		line-height: 1
+		margin-bottom: 30px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			bottom: -10px
+			left: 0
+			width: 78px
+			height: 1px
+			background: $acc
+	&__text
+		color: #4d4d4d
+		text-align: left
+		line-height: 26px
+		&.is-dotted
+			position: relative
+			margin-left: 16px
+			&::before
+				content: ''
+				position: absolute
+				width: 4px
+				height: 4px
+				background: $acc
+				border-radius: 50%
+				top: 50%
+				left: -15px
+				transform: translateY(-50%)
+	&-shape
+		&-sm
+			position: absolute
+			left: 0
+			top: 120px
+			width: 87px
+			height: 87px
+			border-radius: 20px
+			background: $acc
+			transform: rotate(45deg) translateX(70%)
+		&-lt
+			position: absolute
+			right: 35%
+			top: 150px
+			width: 5px
+			height: 28px
+			background: $acc
+			transform: skew(45deg)
+		&-md
+			position: absolute
+			right: 0
+			top: 0
+			transform: translateY(-20%)
+			pointer-events: none
+		&-stroke
+			position: absolute
+			right: 0
+			bottom: 24px
+			width: 87px
+			height: 87px
+			border-radius: 15px
+			background: transparent
+			border: 2px solid $acc
+			transform: rotate(25deg) translateX(-70%)
+			transition: all 0.3s linear
+			animation: swim 3s linear 2s infinite alternate
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 54px
+				height: 54px
+				border-radius: 10px
+				background: transparent
+				border: 2px solid $acc
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 24px
+				height: 24px
+				border-radius: 5px
+				background: transparent
+				border: 2px solid $acc
+
+
+/* 3. Works */
+.works
+	background: url(../img/works/bg.jpg) no-repeat center center
+	background-size: cover
+	padding-top: 70px
+	padding-bottom: 70px
+	border-radius: 5px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-between
+	&__header
+		+hdr
+		line-height: 40px
+		margin-bottom: 40px
+	&__btn
+		+btn
+	&__tabs
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		width: 70%
+	&__tab
+		width: 140px
+		height: 35px
+		line-height: 25px
+		border-radius: 50px
+		border: 1px solid #fff
+		text-align: center
+		background: transparent
+		color: #fff
+		transition: all 0.3s
+		&:hover, &.is-active
+			background: #fff
+			color: $b
+		&:hover, &:focus, &:visited, &:active
+			outline: none
+		&:focus
+			border: 2px solid #fff
+	&__videos
+		margin: 50px auto
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+	&__video
+		width: 360px
+		margin: 20px
+		max-width: 500px
+		position: relative
+		background: url('http://via.placeholder.com/600x375') no-repeat center
+		background-size: cover
+		// preroll
+		&:nth-child(1)
+			background: url('../img/works/pr1.jpg') no-repeat center
+			background-size: cover
+			// preroll
+		&:nth-child(2)
+			background: url('../img/works/pr2.jpg') no-repeat center
+			background-size: cover
+		// clip
+		&:nth-child(3)
+			background: url('../img/works/cl1.jpg') no-repeat center
+			background-size: cover
+		// integration
+		&:nth-child(4)
+			background: url('../img/works/int1.jpg') no-repeat center
+			background-size: cover
+		// stream
+		&:nth-child(6)
+			background: url('../img/works/str1.jpg') no-repeat center
+			background-size: cover
+		&--soon
+			display: flex
+			align-items: center
+			justify-content: center
+			background: #fff
+			color: $b
+			font-size: 40px
+			+lt
+		iframe
+			width: 100%
+			height: 100%
+			opacity: 0
+			transform: all 0.3s
+			&.is-vis
+				opacity: 1
+		&-play
+			background: transparent
+			border: none
+			cursor: pointer
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&-overlay
+			cursor: pointer
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: $acc
+			opacity: 0.25
+	&__ring
+		display: block
+		position: absolute
+		bottom: 0
+		right: 0
+		transform: translate(30%, 35%)
+		background: transparent
+		width: 360px
+		height: 360px
+		box-shadow: 0px 0px 30px 0px rgba(36, 0, 255, 0.15)
+		border-width: 40px
+		border-style: solid
+		border-color: #347eff
+		border-radius: 50%
+		pointer-events: none
+
+
+/* 4. Achieves */
+#achieves
+	padding-top: 70px
+	padding-bottom: 70px
+.achieves
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&__header
+		+hdr
+		margin-bottom: 30px
+		color: $b
+
+.achieve
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-start
+	width: 33%
+	min-width: 220px
+	height: 185px
+	margin: 10px
+	&__text
+		text-align: center
+		color: #4d4d4d
+	&__icon
+		margin-bottom: 45px
+		min-height: 85px
+		min-width: 85px
+
+
+/* 5. Blogers */
+#blogers
+	min-height: 700px
+	padding-top: 70px
+	padding-bottom: 70px
+	background: url(../img/blogers/rocket.jpg) no-repeat center center
+	background-size: cover
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: $acc
+		opacity: 0.75
+	.container
+		position: relative
+		z-index: 1
+.blogers
+	margin-bottom: 30px
+	padding-top: 70px
+	&__header
+		+hdr
+		margin-bottom: 40px
+	&__btn
+		+btn
+		margin: 0 auto
+		display: block
+	&__prev, &__next
+		position: absolute
+		bottom: 76px
+		height: 46px
+		width: 46px
+		z-index: 1
+		border-radius: 50%
+		background: $b
+		border: none
+		transition: all 0.3s
+		box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.17)
+		display: flex
+		align-items: center
+		justify-content: center
+		svg
+			transition: all 0.3s
+			fill: #fff
+		&:hover, &:focus, &:visited, &:active
+			outline: none
+		&:hover
+			background: #fff
+			svg
+				fill: #222
+	&__prev
+		left: 44%
+		svg
+			transform: rotate(180deg)
+	&__next
+		right: 44%
+.bloger
+	border-radius: 5px
+	background: #fff
+	width: 275px
+	height: 310px
+	position: relative
+	padding: 80px 20px 20px 20px
+	margin: 0 auto 20px auto
+	transition: all 0.5s ease 0s
+	&:hover
+		background: #eee
+	&__img
+		border-radius: 10px
+		width: 100px
+		height: 100px
+		transform: rotate(45deg)
+		box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.17)
+		overflow: hidden
+		position: absolute
+		top: -50px
+		left: 50%
+		margin-left: -50px
+		img
+			display: block
+			width: 140px
+			height: 140px
+			height: auto
+			transform: rotate(-45deg) translateY(-20%)
+	&__stat
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+		justify-content: space-between
+		padding-left: 30px
+		padding-right: 30px
+		margin-bottom: 20px
+	&__num
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		svg, span
+			transition: all 0.3s
+	&__name
+		font-size: 26px
+		color: $b
+		position: relative
+		transition: all 0.3s
+		&:hover
+			color: $acc
+			&::before
+				width: 100%
+		&::before
+			content: ''
+			position: absolute
+			bottom: -2px
+			left: 0
+			width: 0
+			height: 1px
+			background: $acc
+			transition: all 0.3s
+	&__info
+		margin-top: 10px
+		&-item
+			color: #4d4d4d
+			position: relative
+			margin-left: 11px
+			transition: all 0.3s
+			&::before
+				content: ''
+				position: absolute
+				width: 4px
+				height: 4px
+				background: $acc
+				border-radius: 50%
+				top: 9px
+				left: -10px
+	&-invite
+		display: flex
+		flex-direction: column
+		align-items: center
+		&__stat
+			display: flex
+			flex-direction: row
+			align-items: flex-start
+			justify-content: space-between
+			padding-left: 30px
+			padding-right: 30px
+			width: 100%
+		&__img
+			border-radius: 10px
+			width: 100px
+			height: 100px
+			transform: rotate(45deg)
+			box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.17)
+			overflow: hidden
+			position: absolute
+			top: -50px
+			left: 50%
+			margin-left: -50px
+			background: #fff
+			img
+				display: block
+				width: 80px
+				height: 80px
+				height: auto
+				transform: rotate(-45deg) translateY(10%)
+		&__text
+			text-align: center
+			margin-top: 30px
+			margin-bottom: 40px
+			font-size: 20px
+		&__btn
+			+btn
+			background: $acc
+			color: #fff
+			width: 100%
+/* 6. Partners */
+#partners
+	padding-top: 70px
+	padding-bottom: 70px
+.partners
+	&__header
+		+hdr
+		color: $b
+		margin-bottom: 60px
+	&__row
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		&:last-child
+			.partner
+				border-bottom: 1px solid #f2f2f2
+.partner
+	width: 200px
+	height: 175px
+	background: transparent
+	position: relative
+
+	border: 1px solid #f2f2f2
+	border-right: none
+	border-bottom: none
+	&:last-child
+		border-right: 1px solid #f2f2f2
+	&__ico
+		width: 110px
+		height: auto
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: all 0.6s
+		backface-visibility: hidden
+		&-wrap
+			position: absolute
+			width: 100%
+			height: 100%
+			filter: grayscale(100%)
+			transition: all 0.6s
+			&:hover
+				filter: grayscale(0%)
+				img
+					transform: translate(-50%, -50%) scale(1.1)
+
+
+/* 7. Footer */
+#footer
+	background: $b
+	padding-top: 50px
+	padding-bottom: 90px
+.footer
+	display: flex
+	flex-direction: row
+	align-items: flex-start
+	justify-content: space-between
+	&__icon
+		width: 115px
+		margin-bottom: 20px
+	&__subtitle
+		color: #fff
+		line-height: 1.4
+		+lt
+	&__btn
+		+btn
+		+reg
+	&__dex
+		+lt
+		font-size: 14px
+		color: #fff
+		line-height: 1.4
+	&__link
+		color: $acc
+		position: relative
+		+reg
+		&:hover
+			color: $acc
+			&::before
+				width: 100%
+		&::before
+			content: ''
+			transition: all 0.2s
+			display: inline-block
+			width: 0%
+			height: 1px
+			background: $acc
+			position: absolute
+			bottom: -3px
+			left: 0
+			right: 0
+	&__vk
+		position: absolute
+		bottom: 40px
+		left: 50%
+		transform: translateX(-50%)
+		border: none
+		background: $acc
+		border-radius: 50%
+		width: 46px
+		height: 46px
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: all 0.3s ease-out
+		&:hover, &:focus, &:visited, &:active
+			outline: none
+		&:hover
+			transform: translateX(-50%) scale(1.1)
+			opacity: 0.9
+
+
+
+
+@import "media"
